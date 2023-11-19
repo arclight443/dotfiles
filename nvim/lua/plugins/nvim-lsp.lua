@@ -83,7 +83,7 @@ return {
       },
 
       -- Nix
-      nixd = {},
+      nil_ls = {},
 
       -- Bash
       bashls = {},
