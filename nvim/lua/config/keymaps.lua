@@ -19,6 +19,10 @@ end, desc("Delete Buffer"))
 keymap("n", "<leader>sx", "<cmd>Telescope resume<CR>", desc("Resume Telescope"))
 keymap("n", "<leader>fz", "<cmd>Telescope notify<CR>", desc("Notification log"))
 
+keymap("n", "<leader>zn", "<cmd>cd ~/Arclight/config | Telescope git_files<CR>", desc(" NixOS"))
+keymap("n", "<leader>zv", "<cmd>cd ~/Arclight/dotfiles/nvim | Telescope git_files<CR>", desc(" Neovim"))
+keymap("n", "<leader>zr", "<cmd>cd ~/Arclight/dotfiles/run-or-raise | e shortcuts.conf<CR>", desc(" Run-or-raise"))
+
 --LazyTerm
 vim.keymap.del("t", "<C-h>")
 vim.keymap.del("t", "<C-j>")

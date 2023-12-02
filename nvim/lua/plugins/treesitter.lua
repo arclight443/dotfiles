@@ -1,21 +1,25 @@
 return {
   "nvim-treesitter/nvim-treesitter",
-  opts = function(_, opts)
-    if type(opts.ensure_installed) == "table" then
-      vim.list_extend(opts.ensure_installed, {
-        "json",
-        "json5",
-        "jsonc",
-        "terraform",
-        "hcl",
-        "dockerfile",
-        "ninja",
-        "python",
-        "rst",
-        "toml",
-        "typescript",
-        "tsx",
-      })
-    end
-  end,
+  event = { "BufReadPost", "BufNewFile" },
+  main = "nvim-treesitter.configs",
+  dev = true,
+  opts = {
+    autotag = {
+      enable = true,
+    },
+    highlight = {
+      -- `false` will disable the whole extension
+      enable = true,
+      additional_vim_regex_highlighting = false,
+    },
+    incremental_selection = {
+      enable = true,
+      keymaps = {
+        init_selection = "<CR>",
+        node_incremental = "<CR>",
+        scope_incremental = "<S-CR>",
+        node_decremental = "<BS>",
+      },
+    },
+  },
 }
