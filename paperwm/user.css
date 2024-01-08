@@ -1,0 +1,14 @@
+.topbar-transparent-background {
+    background-color: rgba(29, 32, 33, 1);
+}
+
+.paperwm-selection {
+    border: rgba(221, 199, 161, 0.7);
+    border-width: 1px;
+    border-radius: 8px 8px 0px 0px;
+    background-color: rgba(221, 199, 161, 0.35);
+}
+
+.paperwm-window-position-bar {
+    background-color: rgba(131, 165, 152, 0.6);
+}

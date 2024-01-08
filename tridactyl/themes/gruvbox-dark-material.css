@@ -3,13 +3,13 @@
     --tridactyl-bg: #32302f;
     --tridactyl-fg: #ddc7a1;
 
-    --tridactyl-status-font-size: 12px;
+    --tridactyl-status-font-size: 15px;
     --tridactyl-status-font-family: "Fira Code", "San Francisco";
     --tridactyl-status-font-bg: var(--tridactyl-cmdl-bg);
     --tridactyl-status-border: 2px solid #282828;
     --tridactyl-status-border-radius: 4px;
 
-    --tridactyl-header-font-size: 16px;
+    --tridactyl-header-font-size: 18px;
 
     --tridactyl-of-fg: #282828;
     --tridactyl-of-bg: #7daea3;
@@ -116,7 +116,7 @@
 :root #cmdline_iframe {
     position: fixed !important;
     bottom: unset;
-    top: 25% !important;
+    top: 15% !important;
     left: 10% !important;
     z-index: 2147483647 !important;
     width: 80% !important;
