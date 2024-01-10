@@ -40,6 +40,9 @@ colours gruvbox-dark-material
 " Don't overwrite keybindings on GitHub
 set leavegithubalone true
 
+" Don't enable Tridactyl on these sites
+blacklistadd gather.town
+
 " Disable all default search prefixes
 setnull searchurls.amazon
 setnull searchurls.amazonuk
