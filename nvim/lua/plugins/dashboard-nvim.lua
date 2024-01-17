@@ -25,6 +25,15 @@ return {
       key_format = "  %s",
     }
 
+    local logo = [[
+
+	    _._     _,-'\"\"`-.                     
+ 	   (,-.`._,'(       |\\`-/|                 
+ 	       `-.-' \\ )-`( , o o)    󰄛  KittyVim 
+ 	              `-   \\`_`\"'-                
+    ]]
+
+    opts.config.header = vim.split(logo, "\n")
     table.remove(opts.config.center, 5) --removes default 'config' option
     table.insert(opts.config.center, 5, config_nixos)
     table.insert(opts.config.center, 6, config_neovim)
