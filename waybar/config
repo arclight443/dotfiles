@@ -1,0 +1,193 @@
+{
+    "position": "top",
+    "layer": "top",
+    "height": 16,
+
+    "modules-left": [ "custom/launcher", "memory", "cpu" ],
+    "modules-center": [ "hyprland/workspaces" ],
+    "modules-right": [ "tray", "battery", "custom/wvkbd", "pulseaudio", "clock"],
+
+    "custom/launcher": {
+      "format": "󱄅",
+      "on-click": "ulauncher-toggle",
+      "tooltip": false
+    },
+
+    "clock": {
+        "interval": 1,    
+        "format": "{:%b %d %H:%M}",
+        "on-click": "gnome-calendar",
+        "on-click": "pgrep gnome-calendar > /dev/null && pkill -9 gnome-calendar || gnome-calendar",
+        "tooltip": false,
+    },
+
+    "pulseaudio": {
+      "format": "<span size='12000'>{icon} </span>",
+      "format-muted": "<span size='12000' foreground='#7c6f64'>{icon} </span>",
+      "format-icons": {
+          "headphone": "",
+          "hands-free": "",
+          "headset": "",
+          "phone": "",
+          "portable": "",
+          "car": "",
+          "default": ["", ""],
+      },
+      "tooltip": "false",
+      "on-click": "pgrep pavucontrol > /dev/null && pkill -9 pavucontrol || pavucontrol --tab=3",
+    },
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 8,
+        "reverse-direction": true,
+    },
+
+    "memory": {
+      "format": " {}%",
+      "interval": 5,
+      "tooltip": false,
+      "on-click": "pgrep missioncenter > /dev/null && pkill -9 missioncenter || missioncenter",
+    },
+
+    "cpu": {
+      "format": "󰍛 {usage}%",
+      "interval": 5,
+      "tooltip": false,
+      "on-click": "pgrep missioncenter > /dev/null && pkill -9 missioncenter || missioncenter",
+    },
+
+    "disk": {
+      "format": "󰋊 {}%",
+      "interval": 20,
+      "path": "/",
+      "tooltip": false,
+      "on-click": "pgrep missioncenter > /dev/null && pkill -9 missioncenter || missioncenter",
+    },
+
+    "battery": {
+        "interval": 60,
+        "states": {
+            "100": 100,
+            "90": 90,
+            "80": 80,
+            "60": 60,
+            "40": 40,
+            "30": 30,
+            "20": 20,
+            "10": 10,
+        },
+        "format-discharging-100": " ",
+        "format-discharging-90": " ",
+        "format-discharging-80": " ",
+        "format-discharging-60": " ",
+        "format-discharging-40": " ",
+        "format-discharging-30": " ",
+        "format-discharging-20": " ",
+        "format-discharging-10": " ",
+        "format-plugged-100": " ",
+        "format-plugged-90": " ",
+        "format-plugged-80": " ",
+        "format-plugged-60": " ",
+        "format-plugged-40": " ",
+        "format-plugged-30": " ",
+        "format-plugged-20": " ",
+        "format-plugged-10": " ",
+        "format-charging-100": " ",
+        "format-charging-90": " ",
+        "format-charging-80": " ",
+        "format-charging-60": " ",
+        "format-charging-40": " ",
+        "format-charging-30": " ",
+        "format-charging-20": " ",
+        "format-charging-10": " ",
+        "format-full": " ",
+        "max-length": 30,
+        "tooltip": false,
+    },
+
+    "hyprland/workspaces": {
+      "active-only": false,
+      "format": "{name}:{windows}",
+      "format-window-separator": "",
+      "window-rewrite-default": " ",
+      "window-rewrite": {
+        "class<Firefox - Personal>":"<span foreground='#e78a4e'>󰈹 </span>",
+        "class<Firefox - Services>":"<span foreground='#89b482'>󰈹 </span>",
+        "class<Firefox - Private>":"<span foreground='#d3869b'>󰈹 </span>",
+        "class<Firefox - Private>":"<span foreground='#d3869b'>󰈹 </span>",
+        "class<.*Chromium.*>":"<span foreground='#7daea3'> </span>",
+        "class<.*ophjlpahpchlmihnnnihgmmeilfjmjjc.*>":"<span foreground='#89b482'>󰍡 </span>",
+        "class<FreeTube>":"<span foreground='#ea6962'>󰗃 </span>",
+        "class<.*Youtube Music.*>":"<span foreground='#ea6962'> </span>",
+        "class<.*steam.*>":"<span foreground='#dddddd'>󰓓 </span>",
+        "class<.*telegram.*>":"<span foreground='#7daea3'> </span>",
+        "class<Discord>":"<span foreground='#7daea3'>󰙯 </span>",
+        "class<Slack>":"<span foreground='#dddddd'>󰒱 </span>",
+        "class<.*thunar.*>":" ",
+        "class<.*evolution.*>":"󰇮 ",
+        "class<.*thunderbird.*>":"󰇮 ",
+        "class<.*keepassxc.*>":"󰯄 ",
+        "class<.*ulauncher.*":" ",
+        "class<.*rofi.*":" ",
+        "class<.*fcitx.*":" ",
+        "class<kitty>":" ",
+        "class<ncmpcpp>":"󰝚 ",
+        "class<.*mpd.*>":"󰎄 ",
+        "class<neovim>":" ",
+        "class<pulsemixer>":" ",
+        "class<bluetuith>":"󰂱 ",
+        "class<.*blueman.*>":"󰂱 ",
+        "class<krita>":" ",
+        "class<btop>":" ",
+        "<.*Junction>":"󱞧 ",
+        "class<.*missioncenter.*>":"",
+        "class<.*pavucontrol.*>":"",
+        "class<.*calendar.*>":"",
+      },
+    },
+
+ "temperature": {
+    //"hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
+    //"hwmon-path": "/sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input",
+  "hwmon-path-abs": "/sys/devices/platform/coretemp.0/hwmon",
+  "input-filename": "temp1_input",  
+      "critical-threshold": 80,
+      "interval": 2,
+      "format": "{icon} {temperatureC}°C",
+      //"format": "{temperatureC}°C",
+      "format-icons": [
+          "", // Icon: temperature-empty
+          "", // Icon: temperature-quarter
+          "", // Icon: temperature-half
+          "", // Icon: temperature-three-quarters
+          ""  // Icon: temperature-full
+      ],
+      "tooltip": true
+    },
+
+    "custom/wlogout": {
+        "format": "  {}",
+        "on-click": "wlogout -p xdg -b 2 -T 300 -B 300 -R 800 -L 800",
+        "tooltip": false
+    },
+    
+    "custom/wallchange": {
+        "format": "󰸉 ",
+        "exec": "echo ; echo  switch wallpaper",
+        "on-click": "~/.bin/wallpapers_loop.sh",
+        "on-click-right": "~/.bin/kill_wallpaper_loop.sh",
+        "on-click-middle":"~/.bin/wallpaper_set.sh",
+        "interval" : 86400, // once every day
+        "tooltip": true
+    },
+
+    "custom/wvkbd": {
+        "format": "",
+        "on-click": "pkill -SIGRTMIN wvkbd-mobintl",
+        "tooltip": false,
+    },
+
+}
+
+
