@@ -1,0 +1,17 @@
+@theme "gruvbox-dark"
+
+* {
+    font:                        "Iosevka Nerd Font 18";
+}
+
+mainbox {
+    enabled:                     true;
+    spacing:                     10px;
+    padding:                     30px;
+    background-color:            transparent;
+}
+
+window {
+  border: 0;
+}
+

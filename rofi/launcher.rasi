@@ -36,6 +36,7 @@ window {
     anchor:                      center;
     fullscreen:                  false;
     width:                       1100px;
+    height:                      600px;
     x-offset:                    0px;
     y-offset:                    0px;
 
@@ -45,7 +46,7 @@ window {
     padding:                     0px;
     border-radius:               20px;
     cursor:                      "default";
-    background-color:            #22272C;
+    background-color:            #282828;
 }
 
 /*****----- Main Box -----*****/
@@ -75,7 +76,7 @@ textbox-prompt-colon {
     expand:                      false;
     padding:                     8px 11px;
     border-radius:               100%;
-    background-color:            white;
+    background-color:            #d5c4a1;
     text-color:                  black;
     str:                         " ";
 }
@@ -84,7 +85,7 @@ entry {
     padding:                     8px 12px;
     border:                      0px;
     background-color:            transparent;
-    text-color:                  white;
+    text-color:                  #d5c4a1;
     cursor:                      text;
     placeholder:                 "Search...";
     placeholder-color:           inherit;
@@ -120,19 +121,19 @@ element {
     border-radius:               100%;
     border-color:                gray/15%;
     background-color:            transparent;
-    text-color:                  gray;
+    text-color:                  #ddc7a1;
     cursor:                      pointer;
 }
 element normal.active {
-    background-image:            linear-gradient(to right, #4C4F52, #2E343B);
+    background-image:            linear-gradient(to right, #7daea3, #7daea3);
     text-color:                  #19B466;
 }
 element selected.normal {
-    background-image:            linear-gradient(to right, #4C4F52, #2E343B);
-    text-color:                  #FF9030;
+    background-image:            linear-gradient(to right, #7daea3, #7daea3);
+    text-color:                  #32302f;
 }
 element selected.active {
-    background-image:            linear-gradient(to right, #4C4F52, #2E343B);
+    background-image:            linear-gradient(to right, #89b482, #89b482);
     text-color:                  #EA5553;
 }
 element-icon {
@@ -156,28 +157,28 @@ mode-switcher{
     margin:                      0px 200px;
     padding:                     12px;
     border-radius:               100%;
-    background-color:            #2E343B;
+    background-color:            #45403d;
 }
 button {
     background-color:            inherit;
-    text-color:                  white;
+    text-color:                  #d5c4a1;
     cursor:                      pointer;
 }
 button selected {
     background-color:            inherit;
-    text-color:                  #FF9030;
+    text-color:                  #7daea3;
 }
 
 /*****----- Message -----*****/
 error-message {
     padding:                     20px;
-    background-color:            #22272C;
+    background-color:            #282828;
     text-color:                  white;
 }
 message {
     padding:                     0px;
     background-color:            inherit;
-    text-color:                  #FF9030;
+    text-color:                  #d5c4a1;
 }
 textbox {
     padding:                     0px;

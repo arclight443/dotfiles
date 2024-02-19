@@ -29,6 +29,7 @@ vim.keymap.del("t", "<C-k>")
 vim.keymap.del("t", "<C-l>")
 vim.keymap.del("n", "<C-/>")
 vim.keymap.del("t", "<C-/>")
+vim.o.shell = "zsh"
 
 local lazyterm = function()
   Util.terminal(nil, { cwd = Util.root() })
