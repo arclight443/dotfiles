@@ -48,12 +48,11 @@
           "car": "",
           "default": ["", ""],
       },
-      "tooltip": "false",
+      "tooltip": false,
       "on-click": "pgrep pavucontrol > /dev/null && pkill -9 pavucontrol || pavucontrol --tab=3",
     },
 
     "network": {
-        "interface": "wlan0",
         "format-wifi": "󰖩 ",
         "format-ethernet": "󰈀 ",
         "format-disconnected": "<span foreground='#7c6f64'>󰲛 </span>",

@@ -4,8 +4,8 @@
     font-family: Iosevka Nerd Font;
     font-size: 15px;
     font-style: normal;
-    margin-top: 2px;
-    margin-bottom: 2px;
+    margin-top: 1px;
+    margin-bottom: 1px;
     min-height: 0;
 	}
 
@@ -191,7 +191,6 @@ window#waybar {
 
 
 #battery { 
-    font-size:10px;
     background-color: #32302f;
     color: #ddc7a1;
     border-radius: 0px;
@@ -208,7 +207,7 @@ window#waybar {
 
 #battery.charging{
     color: #7daea3;
-    font-size:17px;
+    font-size:13px;
     margin-right: -0.5em;
 }
 
