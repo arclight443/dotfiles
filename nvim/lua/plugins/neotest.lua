@@ -3,6 +3,7 @@ return {
   optional = true,
   dependencies = {
     "nvim-neotest/neotest-go",
+    "rouge8/neotest-rust",
   },
   opts = {
     adapters = {
@@ -10,6 +11,7 @@ return {
         -- Here we can set options for neotest-go, e.g.
         -- args = { "-tags=integration" }
       },
+      ["neotest-rust"] = {},
     },
   },
 }

@@ -1,5 +1,17 @@
 return {
   "hrsh7th/nvim-cmp",
+  dependencies = {
+    {
+      "Saecki/crates.nvim",
+      event = { "BufRead Cargo.toml" },
+      opts = {
+        src = {
+          cmp = { enabled = true },
+        },
+      },
+    },
+  },
+
   opts = function(_, opts)
     local has_words_before = function()
       unpack = unpack or table.unpack
@@ -9,6 +21,9 @@ return {
 
     local luasnip = require("luasnip")
     local cmp = require("cmp")
+
+    opts.sources = opts.sources or {}
+    table.insert(opts.sources, { name = "crates" })
 
     cmp.setup({
 
