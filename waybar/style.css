@@ -176,20 +176,6 @@ window#waybar {
   border-radius: 10px;
 }
 
-
-#custom-wvkbd {
-  font-family: MesloLGS NF;
-  font-size: 20px;
-  background-color: #32302f;
-  color: #ddc7a1;
-  border-radius: 0 10px 10px 0;
-  margin-left: 0px;
-  margin-right: 5px;
-  padding: 0px 10px 0px 10px;
-  font-weight: bold;
-}
-
-
 #battery { 
     background-color: #32302f;
     color: #ddc7a1;
@@ -199,6 +185,7 @@ window#waybar {
     padding-left: 3px;
     padding-right: 3px;
     font-weight: bold;
+    font-size: 12px;
 }
 
 #battery.full{

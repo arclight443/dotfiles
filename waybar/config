@@ -7,8 +7,8 @@
     "modules-center": [ ],
     "modules-right": [ 
       "custom/borderleft", "tray", "custom/borderright", 
+      "custom/borderleft", "battery", "network", "bluetooth", "pulseaudio", "custom/borderright",
       "custom/borderleft", "cpu", "memory", "custom/borderright", 
-      "custom/borderleft", "battery", "network", "bluetooth", "pulseaudio", "custom/borderright", 
       "custom/borderleft", "clock"
     ],
 
@@ -57,7 +57,8 @@
         "format-ethernet": "󰈀 ",
         "format-disconnected": "<span foreground='#7c6f64'>󰲛 </span>",
         "tooltip": false,
-        "max-length": 50
+        "max-length": 50,
+        "on-click": "pgrep rofi > /dev/null && pkill -9 rofi || rofi-wifi-menu --tab=3",
     },
 
     "bluetooth": {
@@ -66,6 +67,7 @@
         "format-disabled": "<span foreground='#7c6f64'>󰂲</span> ",
         "format-connected": " ",
         "tooltip": false,
+        "on-click": "pgrep rofi > /dev/null && pkill -9 rofi || rofi-bluetooth",
     },
 
     "tray": {
@@ -149,7 +151,7 @@
         "class<.*Chromium.*>":"<span foreground='#7daea3'> </span>",
         "class<.*Chromium.*> title<.*Microsoft Teams.*>":"<span foreground='#7daea3'>󰊻 </span>",
         "class<.*Chromium.*> title<.*Outlook.*>":"<span foreground='#7daea3'>󰴢 </span>",
-        "class<.*Chromium.*> title<.*LINE.*>":"<span foreground='#89b482'>󰍡 </span>",
+        "class<.*Chromium.*> title<LINE>":"<span foreground='#89b482'>󰍡 </span>",
         "class<FreeTube>":"<span foreground='#ea6962'>󰗃 </span>",
         "class<.*Youtube Music.*>":"<span foreground='#ea6962'> </span>",
         "class<.*steam.*>":"<span foreground='#dddddd'>󰓓 </span>",
