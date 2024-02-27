@@ -14,7 +14,7 @@
 
     "custom/launcher": {
       "format": "󱄅",
-      "on-click": "pgrep rofi > /dev/null && pkill -9 rofi || XDG_DATA_DIRS='~/.nix-profile/share:/var/lib/flatpak/exports/share' rofi -show drun -sort true -sorting-method fzf -theme '~/.config/rofi/launcher.rasi'",
+      "on-click": "pgrep rofi > /dev/null && pkill -9 rofi || rofi -show drun -sort true -sorting-method fzf -theme '~/.config/rofi/launcher.rasi'",
       "tooltip": false
     },
 
