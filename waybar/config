@@ -53,6 +53,7 @@
     },
 
     "network": {
+        "format": "",
         "format-wifi": "󰖩 ",
         "format-ethernet": "󰈀 ",
         "format-disconnected": "<span foreground='#7c6f64'>󰲛 </span>",
