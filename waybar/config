@@ -167,6 +167,7 @@
         "class<.*rofi.*":"󰌧 ",
         "class<.*fcitx.*":" ",
         "class<kitty>":" ",
+        "class<alacritty>":" ",
         "class<ncmpcpp>":"󰝚 ",
         "class<.*mpd.*>":"󰎄 ",
         "class<neovim>":" ",
