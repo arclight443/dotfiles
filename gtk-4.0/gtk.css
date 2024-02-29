@@ -77,8 +77,8 @@
 @define-color dark_4 #282828;
 @define-color dark_5 #1b1b1b;
 
-.navigation-sidebar, .top-bar {
-  color: rgb(213,196, 161); 
-  background-color: rgb(48, 48, 48);
+.navigation-sidebar, list.background, .top-bar {
+  color: #ddc7a1; 
+  background-color: #292828;
 }
 

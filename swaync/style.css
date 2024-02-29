@@ -17,7 +17,7 @@
 .control-center .notification-row:focus,
 .control-center .notification-row:hover {
     opacity: 1;
-    background: @noti-bg-darker
+    background: @noti-bg-darker;
 }
 
 .notification-row {
@@ -90,7 +90,7 @@
 .control-center {
     background: @cc-bg;
     border: 2px solid #85796f;
-    border-radius: 0px;
+    border-radius: 10px;
 }
 
 .control-center-list {
