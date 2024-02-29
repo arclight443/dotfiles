@@ -160,6 +160,7 @@
         "class<Discord>":"<span foreground='#7daea3'>󰙯 </span>",
         "class<Slack>":"<span foreground='#dddddd'>󰒱 </span>",
         "class<.*thunar.*>":" ",
+        "class<.*Nautilus.*>":" ",
         "class<.*evolution.*>":"󰇮 ",
         "class<.*thunderbird.*>":"󰇮 ",
         "class<.*keepassxc.*>":"󰯄 ",
