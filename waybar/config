@@ -31,7 +31,7 @@
     "clock": {
         "interval": 1,
         "format": "{:%a, %b %d %H:%M}",
-        "on-click": "pypr toggle calendar",
+        "on-click": "pgrep .gnome-calendar > /dev/null && pkill -9 .gnome-calendar || pypr show calendar",
         "tooltip": false,
     },
 
@@ -80,22 +80,14 @@
       "format": "󰍛<span size='x-small'> {usage}%</span>",
       "interval": 5,
       "tooltip": false,
-      "on-click": "pgrep missioncenter > /dev/null && pkill -9 missioncenter || missioncenter",
+      "on-click": "pypr toggle control",
     },
 
     "memory": {
       "format": " <span size='x-small'>{}%</span>",
       "interval": 5,
       "tooltip": false,
-      "on-click": "pgrep missioncenter > /dev/null && pkill -9 missioncenter || missioncenter",
-    },
-
-    "disk": {
-      "format": "󰋊 {}%",
-      "interval": 20,
-      "path": "/",
-      "tooltip": false,
-      "on-click": "pgrep missioncenter > /dev/null && pkill -9 missioncenter || missioncenter",
+      "on-click": "pypr toggle control",
     },
 
     "battery": {
