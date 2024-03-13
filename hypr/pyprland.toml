@@ -1,0 +1,31 @@
+[pyprland]
+plugins = ["scratchpads"]
+
+[scratchpads.volume]
+animation = "fromTop"
+command = "pavucontrol --tab=3"
+class = "pavucontrol"
+position = "35% 30px"
+size = "65% 90%"
+hysteresis = 0
+unfocus = "hide"
+lazy = true
+
+[scratchpads.power]
+animation = "fromTop"
+command = "powersupply"
+class = "powersupply"
+position = "70% 30px"
+size = "30% 70%"
+hysteresis = 0
+unfocus = "hide"
+lazy = true
+
+[scratchpads.calendar]
+animation = "fromTop"
+command = "gnome-calendar"
+class = "org.gnome.Calendar"
+position = "15% 30px"
+size = "85% 90%"
+hysteresis = 0
+unfocus = "hide"
