@@ -156,7 +156,7 @@
         "class<Slack>":"<span foreground='#dddddd'>󰒱 </span>",
         "class<Mullvad VPN>":"<span foreground='#d8a657'>嬨 </span>",
         "class<org.gnome.Nautilus>":" ",
-        "class<.*evolution.*>":"󰇮 ",
+        "class<evolution>":"󰇮 ",
         "class<org.keepassxc.KeePassXC>":"󰯄 ",
         "class<ONLYOFFICE Desktop Editors>":" ",
         "class<powersupply>":"  ",

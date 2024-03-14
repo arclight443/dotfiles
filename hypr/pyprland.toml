@@ -43,7 +43,7 @@ class_match = true
 process_tracking = false
 
 [scratchpads.logs]
-animation = "fromTop"
+animation = "fromRight"
 command = "alacritty --class 'hyprland-logs' -e tail -f /tmp/hypr/$HYPRLAND_INSTANCE_SIGNATURE/hyprland.log"
 class = "hyprland-logs"
 position = "50% 10%"
@@ -52,7 +52,7 @@ hysteresis = 0
 lazy = true
 
 [scratchpads.socket]
-animation = "fromTop"
+animation = "fromRight"
 command = "alacritty --class 'hyprland-socket' -e socat - \"UNIX-CONNECT:/tmp/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.socket2.sock\""
 class = "hyprland-socket"
 position = "50% 50%"
