@@ -4,9 +4,6 @@
   "positionY": "top",
   "layer": "overlay",
   "control-center-margin-top": 10,
-  "control-center-margin-bottom": 10,
-  "control-center-margin-right": 10,
-  "control-center-margin-left": 10,
   "notification-icon-size": 64,
   "notification-body-image-height": 100,
   "notification-body-image-width": 200,
@@ -28,7 +25,6 @@
     "dnd",
     "notifications",
     "mpris",
-    "volume",
     "buttons-grid"
   ],
   "widget-config": {
@@ -64,7 +60,7 @@
         },
         {
           "label": "󰌾",
-          "command": "$HOME/.config/hypr/scripts/lock-session.sh"
+          "command": "swaylock --config ~/.config/swaylock/config"
         },
         {
           "label": "󰍃",
@@ -81,18 +77,6 @@
         {
           "label": "󰍬",
           "command": "swayosd-client --input-volume mute-toggle"
-        },
-        {
-          "label": "󰖩",
-          "command": "$HOME/.local/bin/shved/rofi-menus/wifi-menu.sh"
-        },
-        {
-          "label": "󰂯",
-          "command": "blueman-manager"
-        },
-        {
-          "label": "",
-          "command": "obs"
         }
       ]
     }

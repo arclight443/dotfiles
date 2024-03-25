@@ -1,20 +1,21 @@
 {
     "position": "top",
     "layer": "bottom",
-    "height": 16,
+    "height": 32,
 
     "modules-left": [ "custom/launcher", "hyprland/workspaces" ],
     "modules-center": [ ],
     "modules-right": [ 
       "custom/borderleft", "tray", "custom/borderright", 
       "custom/borderleft", "battery", "network", "bluetooth", "pulseaudio", "custom/borderright",
-      "custom/borderleft", "cpu", "memory", "custom/borderright", 
-      "custom/borderleft", "clock"
+      "custom/borderleft", "cpu", "memory", "temperature", "custom/borderright",
+      "custom/borderleft", "custom/notification", "custom/borderright",
+      "custom/borderleft", "clock",
     ],
 
     "custom/launcher": {
       "format": "󱄅",
-      "on-click": "pgrep rofi > /dev/null && pkill -9 rofi || rofi -show drun -sort true -sorting-method fzf -theme '~/.config/rofi/launcher.rasi'",
+      "on-click": "pgrep rofi > /dev/null && pkill -9 rofi || rofi -normal-window -show drun -sort true -sorting-method fzf -theme '~/.config/rofi/launcher.rasi'",
       "tooltip": false
     },
 
@@ -31,8 +32,9 @@
     "clock": {
         "interval": 1,
         "format": "{:%a, %b %d %H:%M}",
-        "on-click": "pgrep .gnome-calendar > /dev/null && pkill -9 .gnome-calendar || pypr show calendar",
         "tooltip": false,
+        "on-click": "pgrep .gnome-calendar > /dev/null && pkill -9 .gnome-calendar || gnome-calendar",
+        "on-click": "pypr toggle calendar",
     },
 
     "pulseaudio": {
@@ -49,6 +51,7 @@
       },
       "tooltip": false,
       "on-click": "pypr toggle volume",
+      //"on-click": "pgrep pavucontrol > /dev/null && pkill -9 pavucontrol || pavucontrol --tab=3",
     },
 
     "network": {
@@ -81,6 +84,7 @@
       "interval": 5,
       "tooltip": false,
       "on-click": "pypr toggle control",
+      //"on-click": "pgrep missioncenter > /dev/null && pkill -9 missioncenter || missioncenter",
     },
 
     "memory": {
@@ -88,6 +92,7 @@
       "interval": 5,
       "tooltip": false,
       "on-click": "pypr toggle control",
+      //"on-click": "pgrep missioncenter > /dev/null && pkill -9 missioncenter || missioncenter",
     },
 
     "battery": {
@@ -129,6 +134,7 @@
         "format-full": " ",
         "tooltip": false,
         "on-click": "pypr toggle power",
+        // "on-click": "pgrep powersupply > /dev/null && pkill -9 powersupply || powersupply"
     },
 
     "hyprland/workspaces": {
@@ -150,7 +156,7 @@
         "class<whatsapp-for-linux>":"<span foreground='#89b482'> </span>",
         "class<FreeTube>":"<span foreground='#ea6962'>󰗃 </span>",
         "class<.*Youtube Music.*>":"<span foreground='#ea6962'>󰗃 </span>",
-        "class<.*steam.*>":"<span foreground='#dddddd'>󰓓 </span>",
+        "class<steam>":"<span foreground='#dddddd'>󰓓 </span>",
         "class<org.telegram.desktop>":"<span foreground='#7daea3'> </span>",
         "class<Discord>":"<span foreground='#7daea3'>󰙯 </span>",
         "class<Slack>":"<span foreground='#dddddd'>󰒱 </span>",
@@ -187,28 +193,44 @@
     },
 
  "temperature": {
-    //"hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
+    "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
     //"hwmon-path": "/sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input",
-  "hwmon-path-abs": "/sys/devices/platform/coretemp.0/hwmon",
-  "input-filename": "temp1_input",  
-      "critical-threshold": 80,
-      "interval": 2,
-      "format": "{icon} {temperatureC}°C",
-      //"format": "{temperatureC}°C",
-      "format-icons": [
-          "", // Icon: temperature-empty
-          "", // Icon: temperature-quarter
-          "", // Icon: temperature-half
-          "", // Icon: temperature-three-quarters
-          ""  // Icon: temperature-full
-      ],
-      "tooltip": true
-    },
+    //"hwmon-path-abs": "/sys/devices/platform/coretemp.0/hwmon",
+    "input-filename": "temp1_input",  
+    "critical-threshold": 80,
+    "interval": 2,
+    "format": "{icon}<span size='x-small'> {temperatureC}°C</span>",
+    "format-icons": [
+        "", // Icon: temperature-empty
+        "", // Icon: temperature-quarter
+        "", // Icon: temperature-half
+        "", // Icon: temperature-three-quarters
+        ""  // Icon: temperature-full
+    ],
+    "tooltip": false,
+    "on-click": "pypr toggle control",
+  },
 
-    "custom/wlogout": {
-        "format": "  {}",
-        "on-click": "wlogout -p xdg -b 2 -T 300 -B 300 -R 800 -L 800",
-        "tooltip": false
+
+    "custom/notification": {
+      "tooltip": false,
+      "format": "{icon}",
+      "format-icons": {
+        "notification": "<span foreground='red'><sup></sup></span>",
+        "none": "",
+        "dnd-notification": "<span foreground='red'><sup></sup></span>",
+        "dnd-none": "",
+        "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+        "inhibited-none": "",
+        "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+        "dnd-inhibited-none": ""
+      },
+      "return-type": "json",
+      "exec-if": "which swaync-client",
+      "exec": "swaync-client -swb",
+      "on-click": "swaync-client -t -sw",
+      "on-click-right": "swaync-client -d -sw",
+      "escape": true
     },
 
 }

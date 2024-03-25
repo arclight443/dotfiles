@@ -11,21 +11,6 @@
  * Rofi Version: 1.7.3
  **/
 
-/*****----- Configuration -----*****/
-configuration {
-  modi:                       "drun,run,filebrowser";
-    show-icons:                 true;
-    display-drun:               "";
-    display-run:                "";
-    display-filebrowser:        "";
-  drun-display-format:        "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
-  window-format:              "{w}   {c}   {t}";
-  filebrowser {
-    sorting-method: "name";
-    directories-first: true;
-  }
-}
-
 /*****----- Global Properties -----*****/
 * {
     font:                        "Iosevka Nerd Font 18";
@@ -36,12 +21,12 @@ window {
     /* properties for window widget */
     transparency:                "real"; 
     fullscreen:                  false;
-    /* location:                    north;  */
-    /* anchor:                      north;  */
-    width:                       70%;
+    location:                    northeast;
+    anchor:                      northeast;
+    width:                       40%;
     height:                      80%;
-    /* x-offset:                    0px;    */
-    /* y-offset:                    0px;    */
+    x-offset:                    0px;
+    y-offset:                    0px;
 
     /* properties for all widgets */
     enabled:                     true;
@@ -80,8 +65,8 @@ textbox-prompt-colon {
     padding:                     8px 11px;
     border-radius:               100%;
     background-color:            #d5c4a1;
-    text-color:                  black;
-    str:                         " ";
+    text-color:                  #45403d;
+    str:                         " ";
 }
 entry {
     enabled:                     true;
@@ -90,7 +75,7 @@ entry {
     background-color:            transparent;
     text-color:                  #d5c4a1;
     cursor:                      text;
-    placeholder:                 "Search...";
+    placeholder:                 "SSID";
     placeholder-color:           inherit;
     vertical-align:              0.5;
     horizontal-align:            0.0;

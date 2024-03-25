@@ -13,11 +13,10 @@ window#waybar {
     background: rgba(0,0,0,0);
 }
 
-#clock, 
-#pulseaudio, 
-#network, 
-#custom-launcher, 
-#custom-pacmanAlt,
+#clock,
+#pulseaudio,
+#network,
+#custom-launcher,
 #cpu,
 #memory,
 #cava,
@@ -46,6 +45,12 @@ window#waybar {
     padding: 0px;
 }
 
+#custom-notification{
+    background-color: #32302f;
+    padding-left: 3px;
+    padding-right: 8px;
+}
+
 #tray {
     background: #32302f;
 }
@@ -64,37 +69,34 @@ window#waybar {
 
 #pulseaudio {
     color: #ddc7a1;
-    font-size: 10px;
     background: #32302f;
     border-radius: 0px;
     margin-left: 0px;
     margin-right: 0px;
     padding-left: 0px;
-    padding-right: 0px;
+    padding-right: 5px;
     font-weight: bold;
 }
 
 #network {
     color: #ddc7a1;
-    font-size:13px;
     background: #32302f;
     border-radius: 0px;
     margin-left: 0px;
     margin-right: 0px;
-    padding-left: 2px;
-    padding-right: 2px;
+    padding-left: 3px;
+    padding-right: 3px;
     font-weight: bold;
 }
 
 #bluetooth {
     color: #ddc7a1;
-    font-size:13px;
     background: #32302f;
     border-radius: 0px;
     margin-left: 0px;
     margin-right: 0px;
-    padding-left: 2px;
-    padding-right: 0px;
+    padding-left: 3px;
+    padding-right: 1px;
     font-weight: bold;
 }
 
@@ -109,26 +111,6 @@ window#waybar {
     font-size: 20px;
 }
 
-/*#custom-launcher button:hover {
-    background-color: #FB4934;
-    color: transparent;
-    border-radius: 10px;
-    margin-right: -5px;
-    margin-left: 10px;
-}*/
-
-#custom-playerctl {
-	background: #32302f;
-    padding: 0px 5px 0px 10px;
-	border-radius: 10px;
-    /*border-left: solid 1px #282738;*/
-    /*border-right: solid 1px #282738;*/
-    margin: 5px 7px;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 16px;
-}
-
 #cpu {
     background-color: #32302f;
     color: #ddc7a1;
@@ -136,7 +118,7 @@ window#waybar {
     border-radius: 0px;
     margin-left: 0px;
     margin-right: 0px;
-    padding-left: 2px;
+    padding-left: 5px;
     padding-right: 2px;
 }
 
@@ -148,13 +130,18 @@ window#waybar {
     margin-left: 0px;
     margin-right: 0px;
     padding-left: 2px;
-    padding-right: 2px;
+    padding-right: 5px;
 }
 
 #temperature {
-  background-color: #32302f;
-  color: #ebcb8b;
-  border-radius: 10px;
+    background-color: #32302f;
+    color: #ddc7a1;
+    font-weight: bold;
+    border-radius: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 2px;
+    padding-right: 5px;
 }
 
 #temperature.critical {
@@ -181,10 +168,9 @@ window#waybar {
     border-radius: 0px;
     margin-left: 0px;
     margin-right: -0.2em;
-    padding-left: 3px;
-    padding-right: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
     font-weight: bold;
-    font-size: 11px;
 }
 
 #battery.full{
@@ -193,7 +179,6 @@ window#waybar {
 
 #battery.charging{
     color: #7daea3;
-    font-size:13px;
     margin-right: -0.5em;
 }
 

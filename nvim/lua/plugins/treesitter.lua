@@ -4,6 +4,8 @@ return {
   main = "nvim-treesitter.configs",
   dev = true,
   opts = {
+    auto_install = false,
+    ensure_installed = {},
     autotag = {
       enable = true,
     },
@@ -12,6 +14,9 @@ return {
       enable = true,
       additional_vim_regex_highlighting = { "markdown" },
     },
+    vim.filetype.add({
+      pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
+    }),
     incremental_selection = {
       enable = true,
       keymaps = {

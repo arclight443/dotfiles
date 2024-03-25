@@ -4,12 +4,12 @@
 @define-color noti-bg-darker #3c3836;
 @define-color noti-bg-hover rgb(27, 27, 43);
 @define-color noti-bg-focus rgba(27, 27, 27, 0.6);
-@define-color text-color #ddc7a1;
+@define-color text-color #d5c4a1;
 @define-color text-color-disabled #a89984;
 @define-color bg-selected #7daea3;
 
 * {
-    font-family: Iosevka Nerd Font;
+    font-family: Inter Iosevka Nerd Font;
     font-weight: bold;
 	  font-size: 14px
 }
@@ -22,8 +22,8 @@
 
 .notification-row {
     outline: none;
-    margin: 10px;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
 }
 
 .notification {
@@ -33,7 +33,7 @@
 
 .notification-content {
     background: @cc-bg;
-    padding: 7px;
+    padding: 5px;
     border-radius: 10px;
     border: 2px solid #ddc7a1;
     margin: 0;
@@ -78,8 +78,8 @@
 
 .time {
     font-size: 11px;
-    color: #7daea3;
-    margin-right: 24px
+    color: #a89984;
+    margin-right: 30px
 }
 
 .body {
@@ -175,7 +175,7 @@
     background: @noti-bg-darker;
     padding: 5px 10px 0px 0px;
     margin: 5px 10px 5px 10px;
-    border-radius: 0px;
+    border-radius: 10px;
 }
 
 .widget-mpris > box > button {
@@ -206,7 +206,7 @@
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button {
-    margin: 3px;
+    margin: 0px;
     background: @cc-bg;
     border-radius: 5px;
     color: @text-color
@@ -219,6 +219,7 @@
 
 .widget-menubar>box>.menu-button-bar>button {
     border: none;
+    border-radius: 5px;
     background: transparent
 }
 
