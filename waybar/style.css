@@ -51,6 +51,12 @@ window#waybar {
     padding-right: 8px;
 }
 
+#custom-password{
+    background-color: #32302f;
+    padding-left: 3px;
+    padding-right: 8px;
+}
+
 #tray {
     background: #32302f;
 }
@@ -61,7 +67,7 @@ window#waybar {
     font-weight: bold;
     background-color: #32302f;
     border-radius: 0px;
-    padding-left: 2px;
+    padding-left: 0.5em;
     padding-right: 4px;
     margin-left: 0px;
     margin-right: 0px;
@@ -74,7 +80,7 @@ window#waybar {
     margin-left: 0px;
     margin-right: 0px;
     padding-left: 0px;
-    padding-right: 5px;
+    padding-right: 2px;
     font-weight: bold;
 }
 
@@ -87,6 +93,7 @@ window#waybar {
     padding-left: 3px;
     padding-right: 3px;
     font-weight: bold;
+    font-size: small;
 }
 
 #bluetooth {
@@ -167,7 +174,7 @@ window#waybar {
     color: #ddc7a1;
     border-radius: 0px;
     margin-left: 0px;
-    margin-right: -0.2em;
+    margin-right: -0.4em;
     padding-left: 5px;
     padding-right: 5px;
     font-weight: bold;
@@ -179,7 +186,7 @@ window#waybar {
 
 #battery.charging{
     color: #7daea3;
-    margin-right: -0.5em;
+    margin-right: -0.6em;
 }
 
 #battery.discharging.30, #battery.discharging.20 {

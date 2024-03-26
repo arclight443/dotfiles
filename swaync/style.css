@@ -1,7 +1,7 @@
-@define-color cc-bg #32302f;
+@define-color cc-bg #282828;
 @define-color noti-border-color #32302f;
 @define-color noti-bg #3c3836;
-@define-color noti-bg-darker #3c3836;
+@define-color noti-bg-darker #32302f;
 @define-color noti-bg-hover rgb(27, 27, 43);
 @define-color noti-bg-focus rgba(27, 27, 27, 0.6);
 @define-color text-color #d5c4a1;
@@ -9,7 +9,7 @@
 @define-color bg-selected #7daea3;
 
 * {
-    font-family: Inter Iosevka Nerd Font;
+    font-family: Cantarell Iosevka Nerd Font;
     font-weight: bold;
 	  font-size: 14px
 }
@@ -89,8 +89,9 @@
 
 .control-center {
     background: @cc-bg;
-    border: 2px solid #85796f;
+    border: 0px;
     border-radius: 10px;
+    box-shadow: 1px 1px 5px #282828aa;
 }
 
 .control-center-list {
@@ -110,7 +111,6 @@
 }
 
 .widget-title {
-    color: #f2e5bc;
     background: @noti-bg-darker;
     padding: 5px 10px;
     margin: 10px 10px 5px 10px;
@@ -138,12 +138,11 @@
     margin: 5px 10px 10px 10px;
     border-radius: 5px;
     font-size: large;
-    color: #f2e5bc;
 }
 
 .widget-dnd>switch {
-    border-radius: 4px;
-    background: #665c54;
+    border-radius: 16px;
+    background: #45403d;
 }
 
 .widget-dnd>switch:checked {
@@ -152,13 +151,13 @@
 }
 
 .widget-dnd>switch slider {
-    background: @cc-bg;
-    border-radius: 5px
+    background: #dddddd;
+    border-radius: 12px
 }
 
 .widget-dnd>switch:checked slider {
-    background: @cc-bg;
-    border-radius: 5px
+    background: #dddddd;
+    border-radius: 12px
 }
 
 .widget-label {

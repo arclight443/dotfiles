@@ -5,7 +5,7 @@ plugins = ["scratchpads", "shortcuts_menu"]
 animation = "fromTop"
 command = "pavucontrol --tab=3"
 class = "pavucontrol"
-position = "35% 30px"
+position = "35% 32px"
 size = "65% 90%"
 hysteresis = 0
 unfocus = "hide"
@@ -15,7 +15,7 @@ lazy = true
 animation = "fromTop"
 command = "missioncenter"
 class = "io.missioncenter.MissionCenter"
-position = "30% 30px"
+position = "30% 32px"
 size = "70% 80%"
 hysteresis = 0
 unfocus = "hide"
@@ -25,7 +25,7 @@ lazy = true
 animation = "fromTop"
 command = "powersupply"
 class = "powersupply"
-position = "70% 30px"
+position = "70% 32px"
 size = "30% 70%"
 hysteresis = 0
 unfocus = "hide"
@@ -35,27 +35,71 @@ lazy = true
 animation = "fromTop"
 command = "gnome-calendar"
 class = "org.gnome.Calendar"
-position = "15% 30px"
+position = "15% 32px"
 size = "85% 90%"
 hysteresis = 0
 lazy = false
 class_match = true
 process_tracking = false
 
+[scratchpads.term]
+animation = "fromTop"
+command = "alacritty --class 'terminal-float'"
+class = "terminal-float"
+position = "15% 32px"
+size = "70% 50%"
+lazy = false
+
+[scratchpads.ncmpcpp]
+animation = "fromTop"
+command = "alacritty --class terminal-ncmpcpp -e ncmpcpp --screen playlist --slave-screen visualizer"
+class = "terminal-ncmpcpp"
+position = "0% 32px"
+size = "100% 97%"
+lazy = true
+excludes = "*"
+
+[scratchpads.btop]
+animation = "fromTop"
+command = "alacritty --class terminal-btop -e btop"
+class = "terminal-btop"
+position = "0% 32px"
+size = "100% 97%"
+lazy = true
+excludes = "*"
+
+[scratchpads.bluetuith]
+animation = "fromTop"
+command = "alacritty --class terminal-bluetuith -e bluetuith"
+class = "terminal-bluetuith"
+position = "5% 32px"
+size = "90% 90%"
+lazy = true
+excludes = "*"
+
 [scratchpads.logs]
-animation = "fromRight"
+animation = "fromTop"
 command = "alacritty --class 'hyprland-logs' -e tail -f /tmp/hypr/$HYPRLAND_INSTANCE_SIGNATURE/hyprland.log"
 class = "hyprland-logs"
-position = "50% 10%"
-size = "50% 40%"
-hysteresis = 0
-lazy = true
+position = "5% 32px"
+size = "90% 90%"
+lazy = false
+excludes = "*"
 
 [scratchpads.socket]
-animation = "fromRight"
+animation = "fromTop"
 command = "alacritty --class 'hyprland-socket' -e socat - \"UNIX-CONNECT:/tmp/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.socket2.sock\""
 class = "hyprland-socket"
-position = "50% 50%"
-size = "50% 40%"
+position = "5% 32px"
+size = "90% 90%"
+lazy = false
+excludes = "*"
+
+[scratchpads.password]
+animation = "fromTop"
+command = "keepassxc"
+class = "org.keepassxc.KeePassXC"
+position = "2% 32px"
+size = "96% 92%"
 hysteresis = 0
-lazy = true
+lazy = false

@@ -6,16 +6,22 @@
     "modules-left": [ "custom/launcher", "hyprland/workspaces" ],
     "modules-center": [ ],
     "modules-right": [ 
-      "custom/borderleft", "tray", "custom/borderright", 
+      "custom/borderleft", "tray", "custom/borderright",
       "custom/borderleft", "battery", "network", "bluetooth", "pulseaudio", "custom/borderright",
-      "custom/borderleft", "cpu", "memory", "temperature", "custom/borderright",
-      "custom/borderleft", "custom/notification", "custom/borderright",
-      "custom/borderleft", "clock",
+      "custom/borderleft", "cpu", "memory", "custom/borderright",
+      "custom/borderleft", "custom/password", "custom/borderright",
+      "custom/borderleft", "custom/notification", "clock",
     ],
 
     "custom/launcher": {
       "format": "󱄅",
       "on-click": "pgrep rofi > /dev/null && pkill -9 rofi || rofi -normal-window -show drun -sort true -sorting-method fzf -theme '~/.config/rofi/launcher.rasi'",
+      "tooltip": false
+    },
+
+    "custom/password": {
+      "format": "",
+      "on-click": "pypr toggle password",
       "tooltip": false
     },
 
@@ -96,7 +102,7 @@
     },
 
     "battery": {
-        "interval": 60,
+        "interval": 1,
         "states": {
             "100": 100,
             "90": 90,
@@ -191,26 +197,6 @@
         "class<org.gnome.Calendar>":" ",
       },
     },
-
- "temperature": {
-    "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
-    //"hwmon-path": "/sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input",
-    //"hwmon-path-abs": "/sys/devices/platform/coretemp.0/hwmon",
-    "input-filename": "temp1_input",  
-    "critical-threshold": 80,
-    "interval": 2,
-    "format": "{icon}<span size='x-small'> {temperatureC}°C</span>",
-    "format-icons": [
-        "", // Icon: temperature-empty
-        "", // Icon: temperature-quarter
-        "", // Icon: temperature-half
-        "", // Icon: temperature-three-quarters
-        ""  // Icon: temperature-full
-    ],
-    "tooltip": false,
-    "on-click": "pypr toggle control",
-  },
-
 
     "custom/notification": {
       "tooltip": false,
