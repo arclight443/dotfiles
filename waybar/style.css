@@ -169,7 +169,27 @@ window#waybar {
   border-radius: 10px;
 }
 
-#battery { 
+#custom-bat0 {
+    background-color: #32302f;
+    color: #ddc7a1;
+    padding-left: 3px;
+    padding-right: 1px;
+    font-weight: bold;
+}
+
+#custom-bat0.charging {
+    color: #7daea3;
+}
+
+#custom-bat0.full {
+    color: #89b482;
+}
+
+#custom-bat0.warning:not(.charging):not(.full) {
+    color: #c14a1a;
+}
+
+#battery {
     background-color: #32302f;
     color: #ddc7a1;
     border-radius: 0px;

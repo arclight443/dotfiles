@@ -7,11 +7,21 @@
     "modules-center": [ ],
     "modules-right": [ 
       "custom/borderleft", "tray", "custom/borderright",
-      "custom/borderleft", "battery", "network", "bluetooth", "pulseaudio", "custom/borderright",
+      "custom/borderleft", "network", "bluetooth", "pulseaudio", "custom/borderright",
       "custom/borderleft", "cpu", "memory", "custom/borderright",
+      "custom/borderleft", "custom/bat0", "custom/borderright",
       "custom/borderleft", "custom/password", "custom/borderright",
       "custom/borderleft", "custom/notification", "clock",
     ],
+
+    "custom/bat0": {
+        "exec": "waybar-battery BAT0",
+        "return-type": "json",
+        "format": "{icon}<span size='x-small' foreground='#ddc7a1'> {}</span>",
+        "format-icons": ["", "", "", "", "", ""],
+        "on-click": "pypr toggle power",
+        "tooltip": false,
+    },
 
     "custom/launcher": {
       "format": "󱄅",
@@ -102,7 +112,6 @@
     },
 
     "battery": {
-        "interval": 1,
         "states": {
             "100": 100,
             "90": 90,
