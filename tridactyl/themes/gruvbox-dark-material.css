@@ -1,15 +1,15 @@
 :root {
-    --tridactyl-font-family: "San Francisco", sans-serif;
+    --tridactyl-font-family: "Cantarell", sans-serif;
     --tridactyl-bg: #32302f;
     --tridactyl-fg: #ddc7a1;
 
-    --tridactyl-status-font-size: 15px;
-    --tridactyl-status-font-family: "Fira Code", "San Francisco";
+    --tridactyl-status-font-size: 18px;
+    --tridactyl-status-font-family: "Iosevka Nerd Font", "Cantarell";
     --tridactyl-status-font-bg: var(--tridactyl-cmdl-bg);
     --tridactyl-status-border: 2px solid #282828;
     --tridactyl-status-border-radius: 4px;
 
-    --tridactyl-header-font-size: 18px;
+    --tridactyl-header-font-size: 20px;
 
     --tridactyl-of-fg: #282828;
     --tridactyl-of-bg: #7daea3;

@@ -74,10 +74,11 @@ set searchurls.gop https://pkgs.go.dev/search?q=
 set searchurls.gh https://github.com/search?utf8=✓&q=
 
 set searchurls.nw https://nixos.wiki/index.php?search=
-set searchurls.np https://search.nixos.org/packages?&query=
-set searchurls.npu https://search.nixos.org/packages?channel=unstable&query=
-set searchurls.no https://search.nixos.org/options?&query=
-set searchurls.nou https://search.nixos.org/options?channel=unstable&query=
+set searchurls.nps https://search.nixos.org/packages?&query=
+set searchurls.nos https://search.nixos.org/options?&query=
+set searchurls.np https://search.nixos.org/packages?channel=unstable&query=
+set searchurls.no https://search.nixos.org/options?channel=unstable&query=
+
 
 set searchurls.gw https://wiki.gentoo.org/index.php?title=Special%3ASearch&profile=default&fulltext=Search&search=
 set searchurls.aw https://wiki.archlinux.org/index.php?search=
